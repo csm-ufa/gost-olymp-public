@@ -1,6 +1,5 @@
 <script>
-    import Container from "./Container.svelte";
-    export let height = "600px";
+    import Container from "../Container.svelte";
     export let reverse = false;
     export let styles = "w-full h-[500px] bg-gray-100";
 </script>
@@ -13,7 +12,7 @@
                     <img src="" alt="">
                 </section>
                 <section class="lg:w-2/3 w-full">
-                    <h2 class="text-lg leading-tight text-gray-900 font-bold text-justify relative">
+                    <h2 class="text-xl leading-tight text-blue-700 font-bold text-justify relative">
                         <slot name="title">
                             Заголовок
                         </slot>

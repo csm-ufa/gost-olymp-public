@@ -1,18 +1,78 @@
 <script>
 	import Container from '../components/Container.svelte';
 	import ScrollSlider from '../components/sliders/ScrollSlider.svelte';
-    import HistoryCard from "../components/HistoryCard.svelte";
+    import HistoryCard from "../components/ui/HistoryCard.svelte";
 	import HowIsWas from '../components/HowIsWas.svelte';
+	import Modal from '../components/modal/Modal.svelte';
+	import Header from '../components/Header.svelte';
+	import Navbar from '../components/Navbar.svelte';
+	import About from '../components/About.svelte';
+	import Devider from '../components/ui/Devider.svelte';
+
+	$: modalShow = false;
+
+	function linkHandler({detail}){
+		if (detail?.action && detail.action === 'modal'){
+			modalShow = true;
+		}
+	}
 </script>
 
 
-<div class="w-full bg-gray-100 m-0 p-0">
-	<Container>
-		
-	</Container>
-</div>
+<Modal show={ modalShow } on:close={ ()=> modalShow = false }>
 
-<div class="w-full h-auto">
+</Modal>
+
+<Header>
+	<div slot="navbar">
+		<Navbar 
+			on:link={ linkHandler }
+			list={[
+				{ href: "#", text: "О проекте"},
+				{ href: "#targets", text: "Цели"},
+				{ href: "#", text: "Условия"},
+				{ href: "#", text: "2022"},
+				{ href: "#", text: "Хочу участвовать", action: "modal" },
+			]} 
+		/>
+	</div>
+</Header>
+
+<section class="w-full bg-gray-100 p-0">
+	<div class="w-full relative pb-10 px-6 xl:px-0">
+		<img class="absolute w-full inset-0 dark:hidden h-full object-cover object-center" src="/img/hero2-bg.png" alt="we care family"/>
+		<div class="relative z-10 container mx-auto">
+			<Container>
+				<div class="lg:flex items-center mt-10">
+					<div class="w-full lg:w-1/2 h-full">
+						<p tabindex="0" class="text-[#199ad6] uppercase text-2xl ">
+							Всероссийская
+						</p>
+						<h1 tabindex="2" class="text-indigo-700 text-4xl lg:text-6xl font-black mb-8 leading-none">
+							Молодежная олимпиада стандартов 2023
+						</h1>
+						<p tabindex="0" class="text-[#A21980] dark:text-white font-regular mb-8 text-base mt-5">
+							Объявлен старт Всероссийской олимпиады в рамках проекта «Метрологический образовательный кластер Росстандарта». Проект направлен на продвижение и развитие метрологии и стандартизации как в Росии так и во всём мире. Присоединяйся и получай новые знания, друзей 
+							<span class="text-indigo-800">и призы :)</span>
+						</p>
+					</div>
+					<div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
+						<img tabindex="0" role="img" aria-label="people smiling" class="mx-auto" src="/img/heroes_image.png"  alt="people smiling"/>
+					</div>
+				</div>
+			</Container>
+		</div>
+	</div>
+</section>
+
+<section class="relative">
+	<Container>
+		<Devider/>
+		<About/>
+	</Container>
+</section>
+
+<div class="w-full h-auto mt-20">
 	<ScrollSlider 
 		height="600px" 
 		data={[

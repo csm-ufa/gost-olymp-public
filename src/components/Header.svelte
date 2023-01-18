@@ -4,20 +4,16 @@
 </script>
 
 
-<header class="w-full bg-gray-100 m-0 p-0">
+<header class="w-full bg-[#f2faff] m-0 p-0">
 	<Container>
 		<div class="flex flex-wrap justify-between items-start">
 			<div class="flex items-center w-1/5" id="header-logo">
-				<img src="" alt="adasd">
+				<img src="/logo.png" alt="adasd" class="h-16">
 			</div>
 			<div class="w-4/5">
-				<Navbar list={[
-					{ href: "#", text: "О проекте"},
-					{ href: "#", text: "Цели"},
-					{ href: "#", text: "Условия"},
-					{ href: "#", text: "2022"},
-					{ href: "#", text: "Хочу участвовать"},
-				]} />
+				<slot name="navbar">
+					<Navbar />
+				</slot>
 			</div>
 		</div>
 	</Container>
