@@ -8,6 +8,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import About from '../components/About.svelte';
 	import Devider from '../components/ui/Devider.svelte';
+	import SocialMedia from '../components/SocialMedia.svelte';
 
 	$: modalShow = false;
 
@@ -18,19 +19,23 @@
 	}
 </script>
 
-
-<Modal show={ modalShow } on:close={ ()=> modalShow = false }></Modal>
+<Modal 
+	on:close={ ()=> modalShow = false }
+	show={ modalShow } 
+>
+	
+</Modal>
 
 <Header>
 	<div slot="navbar">
 		<Navbar 
 			on:link={ linkHandler }
 			list={[
-				// { href: "#about", text: "О проекте"},
-				// { href: "#targets", text: "Цели"},
-				// { href: "#history", text: "2022"},
-				// { href: "#history", text: "СМИ о нас"},
-				// { href: "#", text: "Хочу участвовать", action: "modal" },
+				{ href: "#about", text: "О проекте"},
+				{ href: "#targets", text: "Цели"},
+				{ href: "#history", text: "2022"},
+				{ href: "#history", text: "СМИ о нас"},
+				{ href: "#", text: "Хочу участвовать", action: "modal" },
 			]} 
 		/>
 	</div>
@@ -148,6 +153,6 @@
 	/>
 </div>
 
-<div class="h-[2000px]">
-	test
-</div>
+<section>
+	<SocialMedia />
+</section>

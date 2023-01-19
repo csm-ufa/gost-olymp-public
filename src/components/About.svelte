@@ -13,7 +13,7 @@
                 </h1>
                 <p class="text-lg font-regular text-gray-800 text-justify">
                     В 2022 году в рамках Всероссийского проекта «Метрологический образовательный кластер Росстандарта» 
-                    состоялась Молодежная олимпиада стандартов. Организатором выступило Федерального агентство по техническому 
+                    впервые состоялась Молодежная олимпиада стандартов. Организатором выступило Федерального агентство по техническому 
                     регулированию и метрологии (Росстандарт).
                 </p>
                 <p class="text-lg font-regular text-gray-800 text-justify mt-5">
@@ -25,7 +25,7 @@
         </section>
     </div>
     <div class="py-10" id="targets">
-        <h1 tabindex="0" class="focus:outline-none text-5xl font-extrabold text-center leading-10 text-gray-800 dark:text-white w-full mb-10">
+        <h1 tabindex="0" class="focus:outline-none text-5xl font-extrabold text-center leading-10 text-gray-800 dark:text-white w-full mt-20">
             Цели
         </h1>
         <div class="lg:flex flex-wrap flex-row items-center">
