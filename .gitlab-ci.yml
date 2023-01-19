@@ -40,6 +40,6 @@ deploy_staging:
   # SSH connect and command
   script:
     - rsync -azrv -e "ssh -p 1022" --stats --progress $SRC $MAJORDOMO_SSH_USER@$MAJORDOMO_SSH_HOST:$DST --delete
-    - echo "success deploy"
+    - echo "success deploy ✓"
   only:
     - deploy
