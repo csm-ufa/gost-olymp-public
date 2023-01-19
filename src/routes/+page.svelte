@@ -19,20 +19,18 @@
 </script>
 
 
-<Modal show={ modalShow } on:close={ ()=> modalShow = false }>
-
-</Modal>
+<Modal show={ modalShow } on:close={ ()=> modalShow = false }></Modal>
 
 <Header>
 	<div slot="navbar">
 		<Navbar 
 			on:link={ linkHandler }
 			list={[
-				{ href: "#", text: "О проекте"},
-				{ href: "#targets", text: "Цели"},
-				{ href: "#", text: "Условия"},
-				{ href: "#", text: "2022"},
-				{ href: "#", text: "Хочу участвовать", action: "modal" },
+				// { href: "#about", text: "О проекте"},
+				// { href: "#targets", text: "Цели"},
+				// { href: "#history", text: "2022"},
+				// { href: "#history", text: "СМИ о нас"},
+				// { href: "#", text: "Хочу участвовать", action: "modal" },
 			]} 
 		/>
 	</div>
@@ -49,14 +47,15 @@
 							Всероссийская
 						</p>
 						<h1 tabindex="2" class="text-indigo-700 text-4xl lg:text-6xl font-black mb-8 leading-none">
-							Молодежная олимпиада стандартов 2023
+							Молодежная Олимпиада Стандартов 2023
 						</h1>
-						<p tabindex="0" class="text-[#A21980] dark:text-white font-regular mb-8 text-base mt-5">
+						<p tabindex="0" class="text-[#A21980] dark:text-white font-regular mb-8 text-lg mt-5">
 							Объявлен старт Всероссийской олимпиады в рамках проекта «Метрологический образовательный кластер Росстандарта». Проект направлен на продвижение и развитие метрологии и стандартизации как в Росии так и во всём мире. Присоединяйся и получай новые знания, друзей 
 							<span class="text-indigo-800">и призы :)</span>
 						</p>
 					</div>
 					<div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
+						
 						<img tabindex="0" role="img" aria-label="people smiling" class="mx-auto" src="/img/heroes_image.png"  alt="people smiling"/>
 					</div>
 				</div>
@@ -65,14 +64,14 @@
 	</div>
 </section>
 
-<section class="relative">
+<section class="relative" id="about">
 	<Container>
 		<Devider/>
 		<About/>
 	</Container>
 </section>
 
-<div class="w-full h-auto mt-20">
+<div class="w-full h-auto mt-20" id="history">
 	<ScrollSlider 
 		height="600px" 
 		data={[
