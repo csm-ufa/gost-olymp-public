@@ -5,9 +5,9 @@
 </script>
 
 <Container>
-    <div class="flex flex-wrap justify-center w-full">
-        <div class="">
-            <img src="/gif/social.gif" alt="подпишись на нащи соцсети :)">
+    <div class="flex flex-wrap justify-center w-full mt-10">
+        <div class="relative mb-10">
+            <img class="max-w-lg" src="/gif/social.gif" alt="подпишись на нащи соцсети :)">
         </div>
         <div class="flex flex-nowrap justify-center items-center w-full">
             <a href="https://vk.com/olimp.gost" class="mx-5 text-gray-600 hover:text-blue-700 border border-gray-600 border-dotted rounded-xl py-5 px-6 shadow-sm bg-white hover:bg-gray-50">

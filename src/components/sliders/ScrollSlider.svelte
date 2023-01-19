@@ -7,7 +7,7 @@
     import "swiper/css/navigation";
 
     export let height = "600px";
-    export let animation = { delay: 250, duration: 300 };
+    export let animation = { delay: 150, duration: 300 };
     export let data = [{
         styles: ``,
         title: `<h2>ЗАГОЛОВОК</h2>`,
@@ -43,6 +43,7 @@
         pagination={{
             type: "progressbar",
         }}
+        autoHeight={true}
         navigation={true}
         mousewheel={true}
         slidesPerView={1}
@@ -54,11 +55,15 @@
             <SwiperSlide>
                 <svelte:component this={slide.component} reverse={index % 2} styles="{slide.styles} w-full relative h-[{ height }]">
                     <span slot="title">
-                        { @html slide.title }
+                        {#if activeIndex >= index }
+                            <span transition:fade={animation}>
+                                { @html slide.title }
+                            </span>
+                        {/if}
                     </span>
                     <span slot="content">
                         {#if activeIndex >= index }
-                            <span transition:fade={animation}>
+                            <span transition:fade={{...animation, delay: 250}}>
                                 { @html slide.content }
                             </span>
                         {/if}

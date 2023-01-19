@@ -9,6 +9,7 @@
 	import About from '../components/About.svelte';
 	import Devider from '../components/ui/Devider.svelte';
 	import SocialMedia from '../components/SocialMedia.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	$: modalShow = false;
 
@@ -23,7 +24,28 @@
 	on:close={ ()=> modalShow = false }
 	show={ modalShow } 
 >
-	
+	<div slot="title">
+		<h2 class="text-gray-700 font-bold text-5xl">Условия участия</h2> 
+	</div>
+	<div slot="body" class="max-w-5xl">
+		<p class="text-xl text-gray-800 py-2.5">
+			Школьники оцениваются по различным критериям – понимание темы, творческий подход к решению задач, креативное мышление. 
+			Обязательное условие - <b>знание английского языка</b>. <br>
+			Принять участие может любой школьник в возрасте от 13 до 18 лет. 
+		</p>
+		<p class="text-xl text-gray-800 py-2.5">
+			<b>Отборочный тур </b> начинается с 20 января и продлится по 1 марта. <br>
+			<b>Финальный этап </b> состоится 27 апреля в Нижнем Новгороде. 
+		</p>
+		<p class="text-xl text-gray-800 py-2.5">
+			Для участия необходимо: <br>
+			<span class="pl-5">1. заполнить <a href="/docs/anketa.doc" class="text-blue-600 underline"> анкету</a> ;</span><br>
+			<span class="pl-5">2. написать эссе на тему: «Для чего нужны стандарты».</span><br>
+		</p>
+		<p class="text-xl text-gray-800 py-2.5">
+			Оба документа отправить на почту  <a href="mailto:olymp@rst.gov.ru" class="text-blue-600 underline">olymp@rst.gov.ru</a>
+		</p>
+	</div>
 </Modal>
 
 <Header>
@@ -76,7 +98,7 @@
 	</Container>
 </section>
 
-<div class="w-full h-auto mt-20" id="history">
+<div class="w-full h-auto mt-20 relative" id="history">
 	<ScrollSlider 
 		height="600px" 
 		data={[
@@ -153,6 +175,15 @@
 	/>
 </div>
 
-<section>
+<section class="relative">
 	<SocialMedia />
 </section>
+
+
+<Footer>
+	<div class="font-light text-xs text-gray-800 text-center">
+		Федеральное Бюджетное Учреждение <br>
+		«Государственный региональный центр стандартизации, метрологии и испытаний <br>им. А.М. Муратшина в Республике Башкортостан» <br><br>
+		&copy; 2023
+	</div>
+</Footer>
