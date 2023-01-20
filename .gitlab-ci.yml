@@ -19,6 +19,8 @@ build_staging:
   artifacts:
     paths:
       - $SRC
+    exclude:
+      - "$SRC/assets/*"
   only:
     - deploy
 
@@ -39,6 +41,8 @@ deploy_staging:
   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   # SSH connect and command
   script:
+    - pwd && ls -la 
+    - echo "========="
     - rsync -azrv -e "ssh -p 1022" --stats --progress $SRC $MAJORDOMO_SSH_USER@$MAJORDOMO_SSH_HOST:$DST --delete
     - echo "success deploy ✓"
   only:
