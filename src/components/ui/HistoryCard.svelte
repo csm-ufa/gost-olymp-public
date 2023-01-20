@@ -4,11 +4,11 @@
     export let styles = "w-full h-[500px] bg-gray-100";
 </script>
 
-<section class="{styles} h-full">
+<section class="{styles} h-auto ">
     <div class="w-full h-full flex-1 py-10">
         <Container>
             <div class="flex flex-wrap px-5 lg:px-0 {reverse ? 'flex-row-reverse' : 'flex-row'}">
-                <section class="lg:w-1/3 w-full relative px-4">
+                <section class="hidden lg:block lg:w-1/3 w-full relative px-4">
                     <slot name="images">
                         <img src="" alt="">
                     </slot>

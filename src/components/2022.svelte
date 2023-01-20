@@ -19,7 +19,7 @@
 					<span class="font-black mt-10 text-3xl flex xl:flex-nowrap justify-between w-full items-center">
 						<button
 							data-gallery="true"
-							class="bg-indigo-700 text-base font-medium text-white rounded-3xl text-center py-5 px-9 hover:bg-indigo-600 leading-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 w-full sm:w-auto"
+							class="hidden lg:inline-block bg-indigo-700 text-base font-medium text-white rounded-3xl text-center py-5 px-9 hover:bg-indigo-600 leading-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 w-full sm:w-auto"
 						>
 							Смотреть Фотоотчет
 						</button>
@@ -30,7 +30,7 @@
 						</div>
 					</span> 
 				</div>
-				<div role="list" class="lg:w-1/2">
+				<div class="lg:w-1/2 lg:px-0 px-5">
 					<img src="/gif/preview-animation.webp" alt="2022" class="rounded-2xl h-full w-full">
 				</div>
 			</div>

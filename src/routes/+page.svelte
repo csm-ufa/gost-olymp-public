@@ -13,6 +13,7 @@
 	import TermsModal from '../components/modal/Terms.modal.svelte';
 	import ImageModal from '../components/modal/Image.modal.svelte';
 	import Gallery from '../components/modal/Gallery.modal.svelte';
+	import Reviews from '../components/Reviews.svelte';
 
 	$: modalComponent = TermsModal;
 	$: modalShow = false;
@@ -72,20 +73,20 @@
 			<Container>
 				<div class="lg:flex items-center mt-10">
 					<div class="w-full lg:w-1/2 h-full">
-						<p tabindex="0" class="text-[#199ad6] uppercase text-2xl ">
+						<p class="text-[#199ad6] uppercase text-2xl ">
 							Всероссийская
 						</p>
-						<h1 tabindex="2" class="text-indigo-700 text-4xl lg:text-6xl font-black mb-8 leading-none">
+						<h1  class="text-indigo-700 text-4xl lg:text-6xl font-black mb-8 leading-none">
 							Молодежная Олимпиада Стандартов 2023
 						</h1>
-						<p tabindex="0" class="text-[#A21980] dark:text-white font-regular mb-8 text-lg mt-5">
+						<p class="text-[#A21980] dark:text-white font-regular mb-8 text-lg mt-5">
 							Объявлен старт Всероссийской олимпиады в рамках проекта «Метрологический образовательный кластер Росстандарта». Проект направлен на продвижение и развитие метрологии и стандартизации как в Росии так и во всём мире. Присоединяйся и получай новые знания, друзей 
 							<span class="text-indigo-800">и призы :)</span>
 						</p>
 					</div>
 					<div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
 						
-						<img tabindex="0" role="img" aria-label="people smiling" class="mx-auto" src="/img/heroes_image.png"  alt="people smiling"/>
+						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png"  alt="gost olymp 2022"/>
 					</div>
 				</div>
 			</Container>
@@ -100,7 +101,7 @@
 	</Container>
 </section>
 
-<div class="w-full h-auto mt-20 relative" id="history">
+<div class="w-full h-auto mb-40 lg:mb-0 lg:mt-20 relative" id="history">
 	<ScrollSlider 
 		height="600px" 
 		data={[
@@ -201,6 +202,10 @@
 		]}
 	/>
 </div>
+
+<section class="relative">
+	<Reviews />
+</section>
 
 <section class="relative">
 	<SocialMedia />

@@ -43,7 +43,7 @@ deploy_staging:
   script:
     - pwd && ls -la 
     - echo "========="
-    - cp ./static/assets ./build/
+    - cp -r ./static/assets ./build/
     - ls $SRC
     - rsync -azrv -e "ssh -p 1022" --stats --progress $SRC $MAJORDOMO_SSH_USER@$MAJORDOMO_SSH_HOST:$DST --delete
     - echo "success deploy ✓"

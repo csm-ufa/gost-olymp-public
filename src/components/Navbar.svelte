@@ -15,7 +15,7 @@
     {#if list.length }
         {#each list as a, ind }
             <a 
-                tabindex="{ind + 1}"
+                tabindex="0"
                 data-index={ind}
                 href={ a.href } 
                 class="{[               

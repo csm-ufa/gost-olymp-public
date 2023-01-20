@@ -4,11 +4,11 @@
 <section class="max-w-8xl mx-auto container dark:bg-gray-900">
     <div>
         <section class="flex flex-wrap lg:flex-nowrap justify-between items-start mt-10">
-            <div class="w-2/5">
+            <div class="w-full lg:w-2/5">
                 <img src="./gif/hello.gif" alt="">
             </div>
-            <div tabindex="0" aria-label="group of cards" class="focus:outline-none flex flex-wrap justify-center px-4 w-3/5">
-                <h1 tabindex="0" class="focus:outline-none text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center leading-10 text-gray-800 dark:text-white w-full mb-10">
+            <div aria-label="group of cards" class="focus:outline-none flex flex-wrap justify-center px-4 w-full lg:w-3/5">
+                <h1 class="focus:outline-none text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center leading-10 text-gray-800 dark:text-white w-full mb-10">
                     О проекте
                 </h1>
                 <p class="text-lg font-regular text-gray-800 text-justify">
@@ -25,7 +25,7 @@
         </section>
     </div>
     <div class="py-10" id="targets">
-        <h1 tabindex="0" class="focus:outline-none text-5xl font-extrabold text-center leading-10 text-gray-800 dark:text-white w-full mt-20">
+        <h1 class="focus:outline-none mt-10 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center leading-10 text-gray-800 dark:text-white w-full mb-10">
             Цели
         </h1>
         <div class="lg:flex flex-wrap flex-row items-center">
