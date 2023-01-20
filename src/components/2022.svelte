@@ -1,19 +1,5 @@
 <script>
 	import Container from "./Container.svelte";
-	export let images = [
-		'https://i.ibb.co/McW2r4N/Group-178.png',
-		'https://i.ibb.co/McW2r4N/Group-1775.png',
-		'https://i.ibb.co/McW2r4N/Group-1776.png',
-		'https://i.ibb.co/McW2r4N/Group-1778.png',
-		'https://i.ibb.co/McW2r4N/Group-182.png',
-		'https://i.ibb.co/McW2r4N/Group-183.png',
-		'https://i.ibb.co/McW2r4N/Group-184.png',
-		'https://i.ibb.co/McW2r4N/Group-185.png',
-		'https://i.ibb.co/McW2r4N/Group-186.png',
-		'https://i.ibb.co/McW2r4N/Group-187.png',
-		'https://i.ibb.co/McW2r4N/Group-1.png',
-		'https://i.ibb.co/McW2r4N/Group-178.png',
-	]
 </script>
 <div class="py-10">
 	<Container>
@@ -29,18 +15,20 @@
 						хорошо организованно :) <br>
 						Рассказываем как это было в прошлом году <br>
 					</p>
-					<span class="font-black mt-10 text-3xl flex flex-nowrap justify-center w-full">
-						<span class="text-indigo-200">⟶ &nbsp; </span>
-						<span class="text-indigo-500">⟶ &nbsp; </span>
-						<span class="text-indigo-900">⟶ </span>
-					</span>
-					<!-- <div class="w-full flex justify-center lg:justify-start">
+					
+					<span class="font-black mt-10 text-3xl flex xl:flex-nowrap justify-between w-full items-center">
 						<button
-							class="bg-indigo-700 text-base font-medium text-white rounded-3xl text-center py-5 px-9 mt-8 lg:mt-12 hover:bg-indigo-600 leading-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 w-full sm:w-auto"
+							data-gallery="true"
+							class="bg-indigo-700 text-base font-medium text-white rounded-3xl text-center py-5 px-9 hover:bg-indigo-600 leading-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 w-full sm:w-auto"
 						>
 							Смотреть Фотоотчет
 						</button>
-					</div> -->
+						<div class="xl:pr-12">
+							<span class="text-indigo-200">⟶ &nbsp; </span>
+							<span class="text-indigo-500">⟶ &nbsp; </span>
+							<span class="text-indigo-900">⟶ </span>
+						</div>
+					</span> 
 				</div>
 				<div role="list" class="lg:w-1/2">
 					<img src="/gif/preview-animation.webp" alt="2022" class="rounded-2xl h-full w-full">

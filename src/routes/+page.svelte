@@ -3,50 +3,52 @@
 	import ScrollSlider from '../components/sliders/ScrollSlider.svelte';
     import HistoryCard from "../components/ui/HistoryCard.svelte";
 	import HowIsWas from '../components/2022.svelte';
-	import Modal from '../components/modal/Modal.svelte';
 	import Header from '../components/Header.svelte';
 	import Navbar from '../components/Navbar.svelte';
 	import About from '../components/About.svelte';
 	import Devider from '../components/ui/Devider.svelte';
 	import SocialMedia from '../components/SocialMedia.svelte';
 	import Footer from '../components/Footer.svelte';
+	import { onMount } from 'svelte';
+	import TermsModal from '../components/modal/Terms.modal.svelte';
+	import ImageModal from '../components/modal/Image.modal.svelte';
+	import Gallery from '../components/modal/Gallery.modal.svelte';
 
+	$: modalComponent = TermsModal;
 	$: modalShow = false;
+	$: zoomImageUrl = null;
 
 	function linkHandler({detail}){
-		if (detail?.action && detail.action === 'modal'){
+		if (detail?.action && detail.action === 'terms'){
 			modalShow = true;
+			modalComponent = TermsModal;
 		}
 	}
+
+
+	onMount(()=>{
+		window.addEventListener('click', ({target}) => {
+			if (target.dataset?.zimg) {
+				modalComponent = ImageModal;
+				zoomImageUrl = target.src;
+				modalShow = true;
+			}
+
+			if (target.dataset?.gallery) {
+				modalComponent = Gallery;
+				modalShow = true;
+				return;
+			}
+		})
+	})
 </script>
 
-<Modal 
+
+<svelte:component 
+	this={ modalComponent }
+	props={{ show: modalShow, url: zoomImageUrl }} 
 	on:close={ ()=> modalShow = false }
-	show={ modalShow } 
->
-	<div slot="title">
-		<h2 class="text-gray-700 font-bold text-5xl">Условия участия</h2> 
-	</div>
-	<div slot="body" class="max-w-5xl">
-		<p class="text-xl text-gray-800 py-2.5">
-			Школьники оцениваются по различным критериям – понимание темы, творческий подход к решению задач, креативное мышление. 
-			Обязательное условие - <b>знание английского языка</b>. <br>
-			Принять участие может любой школьник в возрасте от 13 до 18 лет. 
-		</p>
-		<p class="text-xl text-gray-800 py-2.5">
-			<b>Отборочный тур </b> начинается с 20 января и продлится по 1 марта. <br>
-			<b>Финальный этап </b> состоится 27 апреля в Нижнем Новгороде. 
-		</p>
-		<p class="text-xl text-gray-800 py-2.5">
-			Для участия необходимо: <br>
-			<span class="pl-5">1. заполнить <a href="/docs/anketa.doc" class="text-blue-600 underline"> анкету</a> ;</span><br>
-			<span class="pl-5">2. написать эссе на тему: «Для чего нужны стандарты».</span><br>
-		</p>
-		<p class="text-xl text-gray-800 py-2.5">
-			Оба документа отправить на почту  <a href="mailto:olymp@rst.gov.ru" class="text-blue-600 underline">olymp@rst.gov.ru</a>
-		</p>
-	</div>
-</Modal>
+/>
 
 <Header>
 	<div slot="navbar">
@@ -57,7 +59,7 @@
 				{ href: "#targets", text: "Цели"},
 				{ href: "#history", text: "2022"},
 				{ href: "#history", text: "СМИ о нас"},
-				{ href: "#", text: "Хочу участвовать", action: "modal" },
+				{ href: "#", text: "Хочу участвовать", action: "terms" }
 			]} 
 		/>
 	</div>
@@ -120,6 +122,10 @@
 					Министерства промышленности, энергетики и инноваций Республики Башкортостан, ФГБОУ ВО УГАТУ. Местом проведения стал 
 					Уфимский государственный авиационный технический университет. 
 				`,
+				images: [
+					'/img/slide_1.1.jpg',
+					'/img/slide_1.2.jpg'
+				]
     		},
 			{
 				component: HistoryCard,
@@ -138,6 +144,10 @@
                         Важное условие – стандарт должен быть актуальным, нужным, полезным и новым. 
                     </blockquote>
 				`,
+				images: [
+					'/img/slide_2.1.jpg',
+					'/img/slide_2.2.jpg'
+				]
     		},
 			{
 				component: HistoryCard,
@@ -150,6 +160,10 @@
         		content: `
 					<p>По видеосвязи школьников поздравила сенатор от Башкортостана, председатель комитета Совета Федерации по науке, образованию и культуре Лилия Гумерова. Поздравительный адрес от имени Главы республики Радия Хабирова зачитал министр образования и науки Республики Башкортостан Айбулат Хажин. </p>
 				`,
+				images: [
+					'/img/slide_3.2.jpg',
+					'/img/slide_3.1.jpg',
+				]
     		},
 			{
 				component: HistoryCard,
@@ -159,7 +173,11 @@
                         Были также вручены призы зрительских симпатий от Роскачества и Ассоциации индустрии детских товаров.
                         Министр промышленности, энергетики и инноваций Республики Башкортостан Александр Шельдяев вручил каждому школьнику благодарность от своего ведомства.
 				`,
-				content: ""
+				content: "",
+				images: [
+					'/img/slide_4.1.jpg',
+					'/img/slide_4.2.jpg',
+				]
     		},
 			{
 				component: HistoryCard,
@@ -175,6 +193,10 @@
 					И хотя в этом году наша команда не вошла в число победителей, все ребята продемонстрировали хорошие знания, командный дух, испытали массу положительных эмоций и получили замечательный опыт. 
 					В завершении мероприятия организаторы пригласили российских школьников участвовать в Олимпиаде и в следующем году. 
 				`,
+				images: [
+					'/img/slide_5.1.jpg',
+					'/img/slide_5.2.jpg',
+				]
     		},
 		]}
 	/>

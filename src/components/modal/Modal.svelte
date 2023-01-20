@@ -37,7 +37,7 @@
                                     <slot name="icon">
                                     </slot>
                                 </div>
-                                <h3 class="text-lg ml-4 leading-6 font-medium text-gray-900" id="modal-title">
+                                <h3 class="text-lg ml-4 leading-6 font-medium text-gray-900 w-full" id="modal-title">
                                     <!-- TITLE -->
                                     <slot name="title">
                                         {params?.error ? params.error : params?.title || "заголовок"}

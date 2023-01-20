@@ -54,6 +54,13 @@
         {#each data as slide, index }
             <SwiperSlide>
                 <svelte:component this={slide.component} reverse={index % 2} styles="{slide.styles} w-full relative h-[{ height }]">
+                    <span slot="images">
+                        {#if slide?.images?.length}
+                            {#each slide.images as img, index }
+                                <img src={img} alt={index} data-zimg="true" class="py-1 px-2 cursor-pointer rounded-2xl"/>
+                            {/each}
+                        {/if}
+                    </span>
                     <span slot="title">
                         {#if activeIndex >= index }
                             <span transition:fade={animation}>
