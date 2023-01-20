@@ -98,7 +98,7 @@
 					</div>
 					<div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
 						
-						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png.webp"  alt="gost olymp 2022" loading="lazy"/>
+						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png.webp"  alt="gost olymp 2022" />
 					</div>
 				</div>
 			</Container>
