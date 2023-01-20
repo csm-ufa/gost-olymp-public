@@ -25,6 +25,6 @@
         </div>
     </div>
     <div slot="body" class="xl:max-w-5xl relative">
-        <img src="{props.url}" alt="zoomed-img" class="w-full h-full rounded-2xl">
+        <img src="{props.url}" alt="zoomed-img" class="w-full h-full rounded-2xl" loading="lazy">
     </div>
 </Modal>

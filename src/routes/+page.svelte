@@ -68,7 +68,7 @@
 
 <section class="w-full bg-gray-100 p-0">
 	<div class="w-full relative pb-10 px-6 xl:px-0">
-		<img class="absolute w-full inset-0 dark:hidden h-full object-cover object-center" src="/img/hero2-bg.png" alt="we care family"/>
+		<img class="absolute w-full inset-0 dark:hidden h-full object-cover object-center" src="/img/hero2-bg.png" alt="we care family" loading="lazy"/>
 		<div class="relative z-10 container mx-auto">
 			<Container>
 				<div class="lg:flex items-center mt-10">
@@ -86,7 +86,7 @@
 					</div>
 					<div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
 						
-						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png"  alt="gost olymp 2022"/>
+						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png"  alt="gost olymp 2022" loading="lazy"/>
 					</div>
 				</div>
 			</Container>

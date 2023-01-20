@@ -7,7 +7,7 @@
 <Container>
     <div class="flex flex-wrap justify-center w-full mt-10">
         <div class="relative mb-10">
-            <img class="max-w-[320px] lg:max-w-md xl:max-w-lg" src="/gif/social.gif" alt="подпишись на нащи соцсети :)">
+            <img class="max-w-[320px] lg:max-w-md xl:max-w-lg" src="/gif/social.gif" alt="подпишись на нащи соцсети :)" loading="lazy">
         </div>
         <div class="flex flex-wrap lg:flex-nowrap justify-center items-center w-full">
             <a href="https://vk.com/olimp.gost" target="_blank" rel="noreferrer" class=" mx-1 lg:mx-5 my-2.5 lg:my-0 text-gray-600 hover:text-blue-700 border border-gray-600 border-dotted rounded-xl py-2.5 lg:py-5 px-3 lg:px-6 shadow-sm bg-white hover:bg-gray-50">

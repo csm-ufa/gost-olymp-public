@@ -56,7 +56,7 @@
             {#each images as { url, alt }, index }
                 <SwiperSlide>
                     <div class="flex justify-center ">
-                        <img src="{url}" alt="{alt || index}" class="h-[500px]"/>
+                        <img src="{url}" alt="{alt || index}" class="h-[500px]" loading="lazy"/>
                     </div>
                 </SwiperSlide>
             {/each}
@@ -75,7 +75,7 @@
     {#if images.length}
         {#each images as { url, alt }, index }
             <SwiperSlide>
-                <img src="{url}" alt="{alt || index}" class="h-[175px] cursor-pointer"/>
+                <img src="{url}" alt="{alt || index}" class="h-[175px] cursor-pointer" loading="lazy"/>
             </SwiperSlide>
         {/each}
     {/if}

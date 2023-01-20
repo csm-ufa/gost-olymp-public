@@ -57,7 +57,7 @@
                     <span slot="images">
                         {#if slide?.images?.length}
                             {#each slide.images as img, index }
-                                <img src={img} alt={index} data-zimg="true" class="py-1 px-2 cursor-pointer rounded-2xl"/>
+                                <img src={img} alt={index} data-zimg="true" class="py-1 px-2 cursor-pointer rounded-2xl" loading="lazy"/>
                             {/each}
                         {/if}
                     </span>

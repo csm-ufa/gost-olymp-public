@@ -5,7 +5,7 @@
     <div>
         <section class="flex flex-wrap lg:flex-nowrap justify-between items-start mt-10">
             <div class="w-full lg:w-2/5">
-                <img src="./gif/hello.gif" alt="">
+                <img src="./gif/hello.gif" alt="Hello Friends" loading="lazy">
             </div>
             <div aria-label="group of cards" class="focus:outline-none flex flex-wrap justify-center px-4 w-full lg:w-3/5">
                 <h1 class="focus:outline-none text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center leading-10 text-gray-800 dark:text-white w-full mb-10">

@@ -31,7 +31,7 @@
 					</span> 
 				</div>
 				<div class="lg:w-1/2 lg:px-0 px-5">
-					<img src="/gif/preview-animation.webp" alt="2022" class="rounded-2xl h-full w-full">
+					<img src="/gif/preview-animation.webp" alt="2022" class="rounded-2xl h-full w-full" loading="lazy">
 				</div>
 			</div>
 		</div>

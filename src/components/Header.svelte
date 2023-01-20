@@ -8,7 +8,7 @@
 	<Container>
 		<div class="flex flex-wrap justify-between items-start">
 			<div class="flex items-center w-1/5" id="header-logo">
-				<img src="/logo.png" alt="adasd" class="h-16">
+				<img src="/logo.png" alt="изображение" class="h-16" loading="lazy">
 			</div>
 			<div class="w-4/5">
 				<slot name="navbar">
