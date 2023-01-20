@@ -18,12 +18,23 @@
 	$: modalComponent = TermsModal;
 	$: modalShow = false;
 	$: zoomImageUrl = null;
+	$: modalTitle = "";
+
+	const defaultTitle = "Молодежная Олимпиада Стандартов 2022, г.Уфа, УГАТУ.";
 
 	function linkHandler({detail}){
-		if (detail?.action && detail.action === 'terms'){
-			modalShow = true;
-			modalComponent = TermsModal;
+		if (detail?.action){
+			if (detail.action === 'terms') {
+				modalShow = true;
+				return modalComponent = TermsModal;
+			} 
+
+			if (detail.action === 'gallery') {
+				modalComponent = Gallery;
+				return modalShow = true;
+			}
 		}
+		
 	}
 
 
@@ -32,6 +43,7 @@
 			if (target.dataset?.zimg) {
 				modalComponent = ImageModal;
 				zoomImageUrl = target.src;
+				modalTitle = target.alt;
 				modalShow = true;
 			}
 
@@ -47,7 +59,7 @@
 
 <svelte:component 
 	this={ modalComponent }
-	props={{ show: modalShow, url: zoomImageUrl }} 
+	props={{ show: modalShow, url: zoomImageUrl, title: modalTitle }} 
 	on:close={ ()=> modalShow = false }
 />
 
@@ -59,7 +71,7 @@
 				{ href: "#about", text: "О проекте"},
 				{ href: "#targets", text: "Цели"},
 				{ href: "#history", text: "2022"},
-				{ href: "#history", text: "СМИ о нас"},
+				{ href: "#", text: "Медиатека", action: "gallery" },
 				{ href: "#", text: "Хочу участвовать", action: "terms" }
 			]} 
 		/>
@@ -68,7 +80,7 @@
 
 <section class="w-full bg-gray-100 p-0">
 	<div class="w-full relative pb-10 px-6 xl:px-0">
-		<img class="absolute w-full inset-0 dark:hidden h-full object-cover object-center" src="/img/hero2-bg.png" alt="we care family" loading="lazy"/>
+		<img class="absolute w-full inset-0 dark:hidden h-full object-cover object-center" src="/img/hero2-bg.png.webp" alt="we care family" loading="lazy"/>
 		<div class="relative z-10 container mx-auto">
 			<Container>
 				<div class="lg:flex items-center mt-10">
@@ -86,7 +98,7 @@
 					</div>
 					<div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
 						
-						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png"  alt="gost olymp 2022" loading="lazy"/>
+						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png.webp"  alt="gost olymp 2022" loading="lazy"/>
 					</div>
 				</div>
 			</Container>
@@ -110,7 +122,7 @@
     		},
 			{
 				component: HistoryCard,
-        		styles: `bg-gray-50`,
+        		styles: `bg-[#f2faff]`,
         		title: `
 					На конкурс пришло более 230 заявок из 21 региона страны. Больше всего – из Саратовской области, 
 					Республики Башкортостан, Томской и Нижегородской областей. В отборочный тур попали 75 школьников, 
@@ -124,13 +136,13 @@
 					Уфимский государственный авиационный технический университет. 
 				`,
 				images: [
-					'/img/slide_1.1.jpg',
-					'/img/slide_1.2.jpg'
+					{ url: '/img/slide_1.1.jpg.webp', alt: defaultTitle },
+					{ url: '/img/slide_1.2.jpg.webp', alt: defaultTitle }
 				]
     		},
 			{
 				component: HistoryCard,
-        		styles: `bg-blue-50`,
+        		styles: `bg-[#f2faff]`,
         		title: `
 					Накануне мероприятия двухчасовой открытый урок для ребят провел Глава Росстандарта Антон Шалаев. 
                     Руководитель ведомства рассказал о том, как создаются стандарты, о роли России в международной стандартизации.
@@ -146,13 +158,13 @@
                     </blockquote>
 				`,
 				images: [
-					'/img/slide_2.1.jpg',
-					'/img/slide_2.2.jpg'
+					{ url: '/img/slide_2.1.jpg.webp', alt: defaultTitle },
+					{ url: '/img/slide_2.2.jpg.webp', alt: defaultTitle }
 				]
     		},
 			{
 				component: HistoryCard,
-        		styles: `bg-green-50`,
+        		styles: `bg-[#f2faff]`,
         		title: `
 					По единогласному решению жюри, все 34 участника состязаний объявлены победителями, а семеро ребят вошли в молодежную сборную России по стандартизации: 
                     Назар Бауэр (Благовещенск, Амурская область), Карина Севрюгина (Ковернино, Нижегородская область), Дарья Сурова (Нижний Новгород), Екатерина Сорина (Тольятти), 
@@ -162,13 +174,13 @@
 					<p>По видеосвязи школьников поздравила сенатор от Башкортостана, председатель комитета Совета Федерации по науке, образованию и культуре Лилия Гумерова. Поздравительный адрес от имени Главы республики Радия Хабирова зачитал министр образования и науки Республики Башкортостан Айбулат Хажин. </p>
 				`,
 				images: [
-					'/img/slide_3.2.jpg',
-					'/img/slide_3.1.jpg',
+					{ url: '/img/slide_3.2.jpg.webp', alt: defaultTitle },
+					{ url: '/img/slide_3.1.jpg.webp', alt: defaultTitle }
 				]
     		},
 			{
 				component: HistoryCard,
-        		styles: `bg-indigo-50`,
+        		styles: `bg-[#f2faff]`,
         		title: `Ректор УГАТУ Сергей Новиков объявил об учреждении стипендии для каждого участника олимпиады, при условии, что они поступят в этот вуз, в размере 50 тысяч рублей ежемесячно в течение первого семестра обучения. Ребята также получат дополнительные баллы к индивидуальным достижениям: 7 баллов 
                         — все участники, 10 баллов — обладатель приза зрительских симпатий УГАТУ (Даниил Козенко). 
                         Были также вручены призы зрительских симпатий от Роскачества и Ассоциации индустрии детских товаров.
@@ -176,13 +188,13 @@
 				`,
 				content: "",
 				images: [
-					'/img/slide_4.1.jpg',
-					'/img/slide_4.2.jpg',
+					{ url: '/img/slide_4.1.jpg.webp', alt: defaultTitle },
+					{ url: '/img/slide_4.2.jpg.webp', alt: defaultTitle }
 				]
     		},
 			{
 				component: HistoryCard,
-        		styles: `bg-yellow-50`,
+        		styles: `bg-[#f2faff]`,
         		title: `
 					Наша молодежная сборная в составе семи человек с 24 по 26 августа представляла Россию на 17-ой Международной молодежной олимпиаде стандартов.
 				`,
@@ -195,17 +207,19 @@
 					В завершении мероприятия организаторы пригласили российских школьников участвовать в Олимпиаде и в следующем году. 
 				`,
 				images: [
-					'/img/slide_5.1.jpg',
-					'/img/slide_5.2.jpg',
+					{ url: '/img/slide_5.1.jpg.webp', alt: defaultTitle },
+					{ url: '/img/slide_5.2.jpg.webp', alt: defaultTitle }
 				]
     		},
 		]}
 	/>
 </div>
 
+
 <section class="relative">
 	<Reviews />
 </section>
+
 
 <section class="relative">
 	<SocialMedia />

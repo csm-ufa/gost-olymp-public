@@ -24,13 +24,23 @@
         return swiperInstance.mousewheel.enable()
     }
     const slideChange = () => {
+        let timer;
         mouseActive = true;
         activeIndex = swiperInstance.activeIndex
         if ( activeIndex >= data.length - 1 && mouseActive) {
-            const timerB = setTimeout(() => {
-                clearTimeout(timerB)
+            timer = setTimeout(() => {
+                clearTimeout(timer)
                 return swiperInstance.mousewheel.disable()
             }, 300)
+            return;
+        }
+
+        if ( activeIndex <= 0 && mouseActive) {
+            timer = setTimeout(() => {
+                clearTimeout(timer)
+                return swiperInstance.mousewheel.disable()
+            }, 300)
+            return;
         }
     };
 </script>
@@ -56,8 +66,8 @@
                 <svelte:component this={slide.component} reverse={index % 2} styles="{slide.styles} w-full relative h-[{ height }]">
                     <span slot="images">
                         {#if slide?.images?.length}
-                            {#each slide.images as img, index }
-                                <img src={img} alt={index} data-zimg="true" class="py-1 px-2 cursor-pointer rounded-2xl" loading="lazy"/>
+                            {#each slide.images as { url, alt } }
+                                <img src={url} {alt} data-zimg="true" class="py-1 px-2 cursor-pointer rounded-2xl" loading="lazy"/>
                             {/each}
                         {/if}
                     </span>

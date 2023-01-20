@@ -8,7 +8,8 @@
     
     export let props = {
         show: false,
-        url: ''
+        url: '',
+        title: ""
     }
 
     function closeEvent(){
@@ -18,7 +19,8 @@
 
 <Modal show={ props.show } on:close={ closeEvent }>
     <div slot="title">
-        <div class="w-full flex flex-nowrap justify-end pr-1">
+        <div class="w-full flex flex-nowrap justify-between pr-1 items-center">
+            <p class="text-gray-600 font-light">{props.title}</p>
             <span on:click={closeEvent} on:keypress={null} class="px-3 py-2 border border-gray-500 text-gray-500 rounded-lg hover:bord-red-700 hover:bg-red-700 hover:text-white cursor-pointer">
                 <Fa icon={faClose} size="xl"/>
             </span>

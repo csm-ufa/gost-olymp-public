@@ -9,16 +9,16 @@
         </h1>
         <div class="flex flex-wrap justify-center items-center">
             <div class="w-full lg:w-1/2 xl:w-1/4 p-2">
-                <img src="/img/review_1.jpeg" loading="lazy" data-zimg="true" alt="отзыв об олимпиаде " class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
+                <img src="/img/review_1.jpeg.webp" loading="lazy" data-zimg="true" alt="отзыв участника: Дарья Суворова" class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
             </div>
             <div class="w-full lg:w-1/2 xl:w-1/4 p-2">
-                <img src="/img/review_2.jpeg" loading="lazy" data-zimg="true" alt="отзыв об олимпиаде " class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
+                <img src="/img/review_2.jpeg.webp" loading="lazy" data-zimg="true" alt="отзыв участника: Карина Севрюгина" class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
             </div>
             <div class="w-full lg:w-1/2 xl:w-1/4 p-2">
-                <img src="/img/review_3.jpeg" loading="lazy" data-zimg="true" alt="отзыв об олимпиаде " class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
+                <img src="/img/review_3.jpeg.webp" loading="lazy" data-zimg="true" alt="отзыв участника: Аскар Арсланов" class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
             </div>
             <div class="w-full lg:w-1/2 xl:w-1/4 p-2">
-                <img src="/img/review_4.jpeg" loading="lazy" data-zimg="true" alt="отзыв об олимпиаде " class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
+                <img src="/img/review_4.jpeg.webp" loading="lazy" data-zimg="true" alt="отзыв участника: Карина Ищук" class="h-[320px] lg:h-auto mx-auto cursor-pointer rounded-2xl filter grayscale hover:grayscale-0 shadow-lg shadow-gray-300 hover:shadow-none hover:rounded duration-200 transition-all">
             </div>
             
         </div>
