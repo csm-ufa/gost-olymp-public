@@ -1,6 +1,7 @@
 <script>
     import Target from "./ui/Target.svelte";
 </script>
+
 <section class="max-w-8xl mx-auto container dark:bg-gray-900">
     <div>
         <section class="flex flex-wrap lg:flex-nowrap justify-between items-start mt-10">
