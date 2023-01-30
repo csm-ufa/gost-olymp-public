@@ -27,7 +27,7 @@
         </p>
         <p class="text-xl text-gray-800 py-2.5">
             Для участия необходимо: <br>
-            <span class="pl-5">1. заполнить <a href="/docs/anketa.doc" content-type="application/msword" download="анкета.doc" class="text-blue-600 underline" rel="preload"> анкету</a> ;</span><br>
+            <span class="pl-5">1. заполнить <a href="/docs/anketa.docx" content-type="application/msword" download="анкета.doc" class="text-blue-600 underline" rel="preload"> анкету</a> ;</span><br>
             <span class="pl-5">2. написать эссе на тему: <abbr title="ограничений по теме и размеру организаторами не предусмотрено" class="cursor-help">«Для чего нужны стандарты»</abbr>.</span><br>
         </p>
         <p class="text-xl text-gray-800 py-2.5">
