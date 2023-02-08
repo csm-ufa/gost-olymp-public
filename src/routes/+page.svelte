@@ -14,6 +14,7 @@
 	import ImageModal from '../components/modal/Image.modal.svelte';
 	import Gallery from '../components/modal/Gallery.modal.svelte';
 	import Reviews from '../components/Reviews.svelte';
+	import Smi from '../components/Smi.svelte';
 
 	$: modalComponent = TermsModal;
 	$: modalShow = false;
@@ -93,7 +94,7 @@
 						</h1>
 						<p class="text-[#A21980] dark:text-white font-regular mb-8 text-lg mt-5">
 							Объявлен старт Всероссийской олимпиады в рамках проекта «Метрологический образовательный кластер Росстандарта». 
-							Проект направлен на продвижение и развитие метрологии и стандартизации как в Росии, так и во всём мире. 
+							Проект направлен на продвижение и развитие метрологии и стандартизации как в России, так и во всём мире. 
 							Присоединяйся и получай новые знания, друзей 
 							<span class="text-indigo-800"> и призы :) </span>
 						</p>
@@ -220,6 +221,10 @@
 
 <section class="relative">
 	<Reviews />
+</section>
+
+<section class="relative">
+	<Smi />
 </section>
 
 
