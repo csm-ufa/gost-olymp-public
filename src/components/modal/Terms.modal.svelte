@@ -1,8 +1,8 @@
 <script>
     import { createEventDispatcher } from 'svelte';
 	import Modal from "./Modal.svelte";
-    import Fa from 'svelte-fa/src/fa.svelte';
-    import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+    // import Fa from 'svelte-fa/src/fa.svelte';
+    // import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
     const dispatch = new createEventDispatcher();
     
     export let props = {
@@ -27,14 +27,14 @@
             <b>Отборочный тур </b> начинается с 20 января и продлится до 19 марта. <br>
             <b>Финальный этап </b> состоится 26 апреля в Нижнем Новгороде. 
         </p>
-        <a href="/docs/contest_right.pdf" content-type="application/pdf" target="_blank" rel="noreferrer" class="flex relative hover:bg-blue-700 transition-colors flex-nowrap flex-row justify-start text-white rounded-xl w-1/2 leading-none bg-blue-500 p-4">
+        <!-- <a href="/docs/contest_right.pdf" content-type="application/pdf" target="_blank" rel="noreferrer" class="flex relative hover:bg-blue-700 transition-colors flex-nowrap flex-row justify-start text-white rounded-xl w-1/2 leading-none bg-blue-500 p-4">
             <span class="w-auto mr-4 relative">
                 <Fa icon={faFilePdf} size="3x"/>
             </span>
             <span class="relative">
                 Положение об организации и проведении российского отборочного этапа Молодежной олимпиады стандартов
             </span>
-        </a>
+        </a> -->
         <p class="text-xl text-gray-800 py-2.5">
             <strong>Для участия необходимо: </strong><br>
             <span class="pl-5">1. заполнить <a href="/docs/anketa.doc" content-type="application/msword" download="анкета.doc" class="text-blue-600 underline" rel="preload"> анкету</a> ;</span><br>

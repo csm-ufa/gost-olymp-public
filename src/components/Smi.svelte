@@ -10,7 +10,7 @@
             СМИ о "Молодежной Олимпиаде Стандартов 2022"
         </h1>
         <div class="flex flex-wrap justify-between items-center">
-            <div class="w-1/3 mb-5">
+            <div class="w-full lg:w-1/3 mb-5">
                 <a 
                 class="p-5 mx-2 leading-none flex-row flex-wrap border border-blue-500 hover:text-blue-700 hover:border-blue-700 font-light rounded-xl flex items-center justify-between text-blue-600 text-xl"
                     href="https://bash.news/news/177906-v-ufe-proshla-pervaya-vserossiyskaya-olimpiada-standartov" 
@@ -20,7 +20,7 @@
                     <Fa icon={faArrowUpRightFromSquare} size="sm"/>
                 </a>
             </div>
-            <div class="w-1/3 mb-5">
+            <div class="w-full lg:w-1/3 mb-5">
                 <a 
                     class="p-5 mx-2 leading-none flex-row flex-wrap border border-blue-500 hover:text-blue-700 hover:border-blue-700 font-light rounded-xl flex items-center justify-between text-blue-600 text-xl"
                     href="https://gtrkamur.ru/news/2022/09/29/258257" 
@@ -30,7 +30,7 @@
                     <Fa icon={faArrowUpRightFromSquare} size="sm"/>
                 </a>
             </div>
-            <div class="w-1/3 mb-5">
+            <div class="w-full lg:w-1/3 mb-5">
                 <a 
                     class="p-5 mx-2 leading-none flex-row flex-wrap border border-blue-500 hover:text-blue-700 hover:border-blue-700 font-light rounded-xl flex items-center justify-between text-blue-600 text-xl"
                     href="https://www.bashinform.ru/news/social/2022-06-01/shkolnik-iz-ufy-v-sostave-sbornoy-strany-primet-uchastie-v-olimpiade-po-standartizatsii-v-yuzhnoy-koree-2825558" 
@@ -40,7 +40,7 @@
                     <Fa icon={faArrowUpRightFromSquare} size="sm"/>
                 </a>
             </div>
-            <div class="w-1/3 mb-5">
+            <div class="w-full lg:w-1/3 mb-5">
                 <a 
                     class="p-5 mx-2 leading-none flex-row flex-wrap border border-blue-500 hover:text-blue-700 hover:border-blue-700 font-light rounded-xl flex items-center justify-between text-blue-600 text-xl"
                     href="https://rutube.ru/video/e60a1779d4aa3c81d0d901cb0d1e3237/?playlist=97517" 
@@ -50,7 +50,7 @@
                     <Fa icon={faArrowUpRightFromSquare} size="sm"/>
                 </a>
             </div>
-            <div class="w-1/3 mb-5">
+            <div class="w-full lg:w-1/3 mb-5">
                 <a 
                     class="p-5 mx-2 leading-none flex-row flex-wrap border border-blue-500 hover:text-blue-700 hover:border-blue-700 font-light rounded-xl flex items-center justify-between text-blue-600 text-xl"
                     href="https://dzen.ru/video/watch/62f373ea0dd0245ae5f3ff34?f=video" 
@@ -60,7 +60,7 @@
                     <Fa icon={faArrowUpRightFromSquare} size="sm"/>
                 </a>
             </div>
-            <div class="w-1/3 mb-5">
+            <div class="w-full lg:w-1/3 mb-5">
                 <a 
                     class="p-5 mx-2 leading-none flex-row flex-wrap border border-blue-500 hover:text-blue-700 hover:border-blue-700 font-light rounded-xl flex items-center justify-between text-blue-600 text-xl"
                     href="https://vk.com/video-27097047_456257037" 
