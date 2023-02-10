@@ -1,8 +1,8 @@
 <script>
     import { createEventDispatcher } from 'svelte';
 	import Modal from "./Modal.svelte";
-    // import Fa from 'svelte-fa/src/fa.svelte';
-    // import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+    import Fa from 'svelte-fa/src/fa.svelte';
+    import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
     const dispatch = new createEventDispatcher();
     
     export let props = {
