@@ -25,7 +25,7 @@
         </p>
         <p class="text-xl text-gray-800 py-2.5">
             <b>Отборочный тур </b> начинается с 20 января и продлится до 19 марта. <br>
-            <b>Финальный этап </b> состоится 26 апреля в Нижнем Новгороде. 
+            <b>Финальный этап </b> состоится 12 мая в Нижнем Новгороде. 
         </p>
         <a href="/docs/contest_right.pdf" content-type="application/pdf" target="_blank" rel="noreferrer" class="flex relative hover:bg-blue-700 transition-colors flex-nowrap flex-row justify-start text-white rounded-xl w-full lg:w-1/2 leading-none bg-blue-500 p-4">
             <span class="w-auto mr-4 relative">
