@@ -9,6 +9,7 @@
     
     export let props = {
         show: false,
+        images: []
     }
 
     function closeEvent(){
@@ -25,6 +26,6 @@
         </div>
     </div>
     <div slot="body" class="xl:max-w-5xl relative">
-        <ImageSlider />
+        <ImageSlider images={props.images} />
     </div>
 </Modal>

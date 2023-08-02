@@ -45,13 +45,18 @@
     };
 </script>
 
-<div class="h-[500px] relative"  on:mouseleave={mouseActivate} on:click={mouseActivate} on:keydown={({key}) => key = "Enter" && mouseActivate}>
+<div 
+    on:mouseleave={mouseActivate} 
+    on:click={mouseActivate} 
+    on:keydown={({key}) => key = "Enter" && mouseActivate}
+    class="h-[500px] relative" 
+>
     <Swiper
         on:init={initSwiper}
         on:slideChange={slideChange}
         direction={"horizontal"}
         pagination={{
-            type: "progressbar",
+            type: "bullets",
         }}
         autoHeight={true}
         navigation={true}

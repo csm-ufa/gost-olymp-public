@@ -12,28 +12,8 @@
   
     // import required modules
     import { Lazy, FreeMode, Navigation, Thumbs } from "swiper";
-  
+    export let images = [];
     let thumbsSwiper = null;
-    const images = [
-        { url: "/assets/image0.jpg.webp", alt: "" },
-        { url: "/assets/image1.jpg.webp", alt: "" },
-        { url: "/assets/image2.jpg.webp", alt: "" },
-        { url: "/assets/image3.jpg.webp", alt: "" },
-        { url: "/assets/image4.jpg.webp", alt: "" },
-        { url: "/assets/image5.jpg.webp", alt: "" },
-        { url: "/assets/image6.jpg.webp", alt: "" },
-        { url: "/assets/image7.jpg.webp", alt: "" },
-        { url: "/assets/image8.jpg.webp", alt: "" },
-        { url: "/assets/image9.jpg.webp", alt: "" },
-        { url: "/assets/image10.jpg.webp", alt: "" },
-        { url: "/assets/image11.jpg.webp", alt: "" },
-        { url: "/assets/image12.jpg.webp", alt: "" },
-        { url: "/assets/image13.jpg.webp", alt: "" },
-        { url: "/assets/image14.jpg.webp", alt: "" },
-        { url: "/assets/image15.jpg.webp", alt: "" },
-        { url: "/assets/image16.jpg.webp", alt: "" },
-        { url: "/assets/image17.jpg.webp", alt: "" },
-    ]
   
     const setThumbsSwiper = (e) => {
       const [swiper] = e.detail;

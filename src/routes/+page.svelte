@@ -2,7 +2,8 @@
 	import Container from '../components/Container.svelte';
 	import ScrollSlider from '../components/sliders/ScrollSlider.svelte';
     import HistoryCard from "../components/ui/HistoryCard.svelte";
-	import HowIsWas from '../components/2022.svelte';
+	import HowIsWas2022 from '../components/2022.svelte';
+	import HowIsWas2023 from '../components/2023.svelte';
 	import Header from '../components/Header.svelte';
 	import Navbar from '../components/Navbar.svelte';
 	import About from '../components/About.svelte';
@@ -15,13 +16,17 @@
 	import Gallery from '../components/modal/Gallery.modal.svelte';
 	import Reviews from '../components/Reviews.svelte';
 	import Smi from '../components/Smi.svelte';
+    import { images2022 } from '../galerys/2022.images';
+    import { images2023 } from '../galerys/2023.images';
 
 	$: modalComponent = TermsModal;
 	$: modalShow = false;
 	$: zoomImageUrl = null;
 	$: modalTitle = "";
+    $: images = []
 
 	const defaultTitle = "Молодежная Олимпиада Стандартов 2022, г.Уфа, УГАТУ.";
+	const title2023 = "Молодежная Олимпиада Стандартов 2023, г.Нижний Новгород.";
 
 	function linkHandler({detail}){
 		if (detail?.action){
@@ -32,6 +37,7 @@
 
 			if (detail.action === 'gallery') {
 				modalComponent = Gallery;
+                images = [...images2023, ...images2022];
 				return modalShow = true;
 			}
 		}
@@ -48,9 +54,17 @@
 				modalShow = true;
 			}
 
-			if (target.dataset?.gallery) {
+			if (target.dataset?.gallery2022) {
 				modalComponent = Gallery;
 				modalShow = true;
+                images = images2022;
+				return;
+			}
+
+            if (target.dataset?.gallery2023) {
+				modalComponent = Gallery;
+				modalShow = true;
+                images = images2023;
 				return;
 			}
 		})
@@ -60,7 +74,7 @@
 
 <svelte:component 
 	this={ modalComponent }
-	props={{ show: modalShow, url: zoomImageUrl, title: modalTitle }} 
+	props={{ show: modalShow, url: zoomImageUrl, title: modalTitle, images }} 
 	on:close={ ()=> modalShow = false }
 />
 
@@ -71,9 +85,10 @@
 			list={[
 				{ href: "#about", text: "О проекте"},
 				{ href: "#targets", text: "Цели"},
-				{ href: "#history", text: "2022"},
+				{ href: "#2022", text: "2022"},
 				{ href: "#", text: "Медиатека", action: "gallery" },
-				{ href: "#", text: "Хочу участвовать", action: "terms" }
+				// { href: "#", text: "Хочу участвовать", action: "terms" }
+				{ href: "#2023", text: "Отчет 2023"},
 			]} 
 		/>
 	</div>
@@ -116,12 +131,109 @@
 	</Container>
 </section>
 
-<div class="w-full h-auto mb-40 lg:mb-0 lg:mt-20 relative" id="history">
+
+<!-- 2023 -->
+<div class="w-full h-auto xl:mt-20 lg:mb-0  relative" id="2023">
 	<ScrollSlider 
 		height="600px" 
 		data={[
 			{
-				component: HowIsWas,
+				component: HowIsWas2023,
+    		},
+			{
+				component: HistoryCard,
+        		styles: `bg-[#f2faff]`,
+        		title: `
+                    Победителей Всероссийской Молодежной олимпиады стандартов определили в Нижнем Новгороде. 
+                    Финал состоялся на базе центра выявления, поддержки и развития способностей и талантов у детей и молодежи «Вега», 
+                    открытого в рамках федерального проекта «Успех каждого ребенка» национального проекта «Образование». 
+                    В олимпиаде приняли участие 34 школьника из 18 регионов России.
+				`,
+        		content: `
+                    <blockquote class="text-gray-600 relative  text-le font-semibold mt-3 leading-none border-2 border-gray-600 border-dotted rounded-2xl text-left px-5 py-3">
+                        «Нам особенно приятно, что Нижний Новгород был выбран местом проведения федерального этапа олимпиады. 
+                        Помимо того, что город в этом году носит статус «Молодежной столицы России», его можно смело назвать сильным промышленным регионом. 
+                        Здесь сосредоточены крупные предприятия, и на каждом из них особую роль играют стандарты. Стандарты — это знания, опыт и мудрость. 
+                        От деятельности специалистов по стандартизации во многом зависит бесперебойная, эффективная работа важнейших отраслей экономики, 
+                        в числе которых транспорт, промышленность, торговля. В ходе олимпиады ребята смогли на себе ощутить, насколько важен труд тех, кто занимается стандартизацией», 
+                    </blockquote>
+                    <span class="text-right font-light text-gray-600 text-sm" >заместитель губернатора Нижегородской области <b>Андрей Саносян.</b> </span>
+				`,
+				images: [
+					{ url: '/assets/2023/IMG_(299)-l.webp', alt: title2023 },
+					{ url: '/assets/2023/IMG_(413)-l.webp', alt: title2023 }
+				]
+    		},
+			{
+				component: HistoryCard,
+        		styles: `bg-[#f2faff]`,
+        		title: `
+                    Школьники традиционно выполнили два задания – индивидуальное письменное и командное. 
+                    Ребята представили экспертам проекты новых международных стандартов, которые они предлагают разработать. 
+                    Были представлены идеи по стандартизации сферы утилизации бумаги, услуг по туризму, обеспечения продовольственной безопасности в области животноводства, мобильных устройств по уборке территорий, медицинского оборудования, а также унификации размерного ряда одежды.
+				`,
+        		content: `
+                    Творческий подход к решению задач, креативное мышление, а также актуальность представленных работ оценивало жюри, в состав которого вошли представители Росстандарта и его подведомственных организаций, Роскачества, Ассоциации предприятий индустрии детских товаров, Союза молодых инженеров России.
+				`,
+				images: [
+					{ url: '/assets/2023/IMG_9016-l.webp', alt: title2023 },
+					{ url: '/assets/2023/IMG_9018-l.webp', alt: title2023 }
+				]
+    		},
+			{
+				component: HistoryCard,
+        		styles: `bg-[#f2faff]`,
+        		title: `Более 250 заявок на участие в олимпиаде в 2023 году...`,
+        		content: `
+                    <blockquote class="text-gray-600 relative  text-le font-semibold mt-3 leading-none border-2 border-gray-600 border-dotted rounded-2xl text-left px-5 py-3">
+                        «В этом году поступило намного больше заявок, чем в прошлом – больше 250 школьников со всей России изъявили желание принять участие в олимпиаде. Мероприятие приобретает все более широкий охват. Участники показали отличную подготовку, все финалисты продемонстрировали высокий уровень знаний в области стандартизации и творческий подход к решению поставленных задач. Прошедший год показал значимость развития технологической независимости государства, а для этого нужны инженеры, в том числе знакомые с базовыми основами стандартизации и обеспечения единства измерений. Мы считаем важным со школьной скамьи рассказывать детям о стандартах, направлениях их использования, актуальности данного направления в целом для развития будущего России»
+                    </blockquote>
+                    <span class="text-right font-light text-gray-600 text-sm" >
+                        руководитель Федерального агентства по техническому регулированию и метрологии <b>Антон Шалаев</b>. 
+                    </span>
+                `,
+				images: [
+                    { url: '/assets/2023/IMG_8919-l.webp', alt: title2023 },
+					{ url: '/assets/2023/IMG_9021-l.webp', alt: title2023 }
+				]
+    		},
+			{
+				component: HistoryCard,
+        		styles: `bg-[#f2faff]`,
+        		title: `
+                    Накануне основной части олимпиады глава Росстандарта традиционно провел открытый урок для финалистов, в ходе которого рассказал учащимся об истории стандартизации, значимости и роли стандартов в повседневной жизни, а также о значении Российской Федерации в международной стандартизации и метрологии. Ребята смогли получить ответы на вопросы в сфере стандартизации, а также поделиться своим видением развития стандартов в стране и во всем мире.
+                `,
+				content: `
+                По итогам финального этапа сформирована сборная, которая представит нашу страну на XVIII Международной молодежной олимпиаде стандартов. В нее вошли Дарья Сурова (Нижний Новгород), Виктория Ечина (Томск), Даниил Буртов (Казань), Динар Дусов (Уфа), София Пастернак (Луганск) и Карина Ищук (Севастополь). При этом Дарья Сурова и Карина Ищук вошли в состав российской сборной уже во второй раз. Международная молодежная олимпиада стандартов проводится на ежегодной основе с 2006 года при поддержке Международной организации по стандартизации (ИСО) и Международной электротехнической комиссии (МЭК).
+                `,
+				images: [
+                    { url: '/assets/2023/IMG_8886-l.webp', alt: title2023 },
+					{ url: '/assets/2023/IMG_(715)-l.webp', alt: title2023 }
+				]
+    		},
+		]}
+	/>
+</div>
+
+<div class="xl:h-40"></div>
+<div class="bg-indigo-700 xl:py-10 mt-30 relative">
+    <Container>
+        <h1 class="focus:outline-none text-3xl lg:text-4xl xl:text-5xl font-extrabold text-center leading-snug text-white dark:text-white w-full">
+            "Молодежная Олимпиада <br>Стандартов 2022" <br>
+            <span class="text-gray-200 text-base font-light">
+                (г. Уфа)
+            </span>
+        </h1>
+    </Container>
+</div>
+
+
+<div class="w-full h-auto mb-40 lg:mb-0 relative" id="2022">
+	<ScrollSlider 
+		height="600px" 
+		data={[
+			{
+				component: HowIsWas2022,
     		},
 			{
 				component: HistoryCard,
@@ -218,7 +330,7 @@
 	/>
 </div>
 
-
+<!-- 2022 -->
 <section class="relative">
 	<Reviews />
 </section>
@@ -226,7 +338,6 @@
 <section class="relative">
 	<Smi />
 </section>
-
 
 <section class="relative">
 	<SocialMedia />
