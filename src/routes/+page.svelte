@@ -83,11 +83,10 @@
 		<Navbar 
 			on:link={ linkHandler }
 			list={[
-				{ href: "#about", text: "О проекте"},
 				{ href: "#targets", text: "Цели"},
 				{ href: "#2022", text: "2022"},
 				{ href: "#", text: "Медиатека", action: "gallery" },
-				// { href: "#", text: "Хочу участвовать", action: "terms" }
+				{ href: "#", text: "Контакты", action: "terms" },
 				{ href: "#2023", text: "Отчет 2023"},
 			]} 
 		/>
@@ -340,7 +339,11 @@
 </section>
 
 <section class="relative">
-	<SocialMedia />
+	<SocialMedia >
+        <div class="relative mb-10">
+            <img class="max-w-[320px] lg:max-w-md xl:max-w-lg" src="/gif/social.webp" alt="подпишись на нащи соцсети :)" loading="lazy">
+        </div>
+    </SocialMedia>
 </section>
 
 
