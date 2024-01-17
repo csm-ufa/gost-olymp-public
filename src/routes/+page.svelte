@@ -85,9 +85,9 @@
 			list={[
 				{ href: "#targets", text: "Цели"},
 				{ href: "#2022", text: "2022"},
+				{ href: "#2023", text: "2023"},
 				{ href: "#", text: "Медиатека", action: "gallery" },
-				{ href: "#", text: "Контакты", action: "terms" },
-				{ href: "#2023", text: "Отчет 2023"},
+				{ href: "#", text: "Прием заявок 2024", action: "terms" },
 			]} 
 		/>
 	</div>
@@ -104,7 +104,7 @@
 							Всероссийская
 						</p>
 						<h1  class="text-indigo-700 text-4xl lg:text-6xl font-black mb-8 leading-none">
-							Молодежная Олимпиада Стандартов 2023
+							Молодежная Олимпиада Стандартов 2024
 						</h1>
 						<p class="text-[#A21980] dark:text-white font-regular mb-8 text-lg mt-5">
 							Объявлен старт Всероссийской олимпиады в рамках проекта «Метрологический образовательный кластер Росстандарта». 
@@ -114,7 +114,6 @@
 						</p>
 					</div>
 					<div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
-						
 						<img aria-label="2022" class="mx-auto" src="/img/heroes_image.png.webp"  alt="gost olymp 2022" />
 					</div>
 				</div>
@@ -348,9 +347,9 @@
 
 
 <Footer>
-	<div class="font-light text-xs text-gray-800 text-center">
-		Федеральное Бюджетное Учреждение <br>
-		«Государственный региональный центр стандартизации, метрологии и испытаний <br>им. А.М. Муратшина в Республике Башкортостан» <br><br>
-		&copy; 2023
+	<div class="font-light text-md text-gray-800 text-center">
+        (Росстандарт) <br>
+		Федеральное агентство по техническому регулированию и метрологии <br>
+		&copy; 2024
 	</div>
 </Footer>
